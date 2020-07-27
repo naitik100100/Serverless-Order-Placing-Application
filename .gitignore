@@ -53,7 +53,6 @@ testem.log
 /typings
 /reports
 /src/translations/template.*
-/src/environments/.env.*
 
 # System Files
 .DS_Store

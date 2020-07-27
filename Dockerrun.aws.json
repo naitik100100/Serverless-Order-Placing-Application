@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "tapanprajapati/company-z-ui"
+    "Name": "tapanprajapati/company-z-ui-a7"
   },
   "Ports": [
     {
