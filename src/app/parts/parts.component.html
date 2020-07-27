@@ -1,0 +1,23 @@
+<div class="main container">
+  <h1 class="text-center" *ngIf="jobName != undefined && jobName != ''">{{ jobName }}</h1>
+  <h3 class="text-center" *ngIf="message">{{ message }}</h3>
+  <table class="table" *ngIf="parts.length > 0">
+    <thead class="thead-dark">
+      <tr>
+        <th>PartId</th>
+        <th>PartName</th>
+        <th>Quantity Available</th>
+        <th>Quantity Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let part of parts">
+        <td>{{ part.partId }}</td>
+        <td>{{ part.partName }}</td>
+        <td>{{ part.qoh }}</td>
+        <td>{{ part.qty }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="order-btn"><button class="btn btn-primary" (click)="makeOrder()">Order</button></div>
+</div>

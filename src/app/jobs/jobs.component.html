@@ -1,0 +1,13 @@
+<div class="main container-fluid">
+  <div class="container-fluid search col-md-6 col-sm-8">
+    <i class="floating-icon search-icon fa fa-search" (click)="searchJob()"></i>
+    <input type="text" name="search" placeholder="Search Job" [(ngModel)]="jobName" (keyup.enter)="searchJob()" />
+    <i class="floating-icon cancel-icon fas fa-times" (click)="clearSearch()"></i>
+  </div>
+</div>
+
+<div class="container jobs-list">
+  <p *ngFor="let job of filteredJobs" class="job-card" [routerLink]="['/parts', job.jobName]">{{ job.jobName }}</p>
+</div>
+<p class="job-card" *ngIf="filteredJobs.length == 0 && message == ''">Job Not Found</p>
+<p class="job-card" *ngIf="message != ''">{{ message }}</p>
